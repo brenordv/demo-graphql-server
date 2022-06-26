@@ -1,0 +1,1 @@
+export const JWT_SIGNATURE_KEY: string = "I know this should not be here. This should be in a very secure place, etc., but this is just an academic project..";
