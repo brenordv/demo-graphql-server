@@ -1,0 +1,4 @@
+Flask == 2.1.1
+flask-cors == 3.0.10
+ariadne == 0.15.1
+simple-log-factory == 0.0.1
