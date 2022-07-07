@@ -32,3 +32,8 @@ My plan is to, in the future, include the dataloaders and subscriptions.
 # Server implementations
 - server_nodejs: GraphQL implemented using NodeJS
 - server_python: GraphQL implemented using Python
+
+
+# Alternative, simpler server
+I also made a simpler GraphQL server to use in a tutorial I made. (Link: )
+In this server, you can add/remove reviews for Products and do a couple of queries. To know more, please check the readme file inside the folder  ```simple_server_python```.
