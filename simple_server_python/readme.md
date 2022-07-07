@@ -1,5 +1,5 @@
 # GraphQL Server Demo
-This is a very simple server that I made as a demo of the basic functionalities of GraphQL.
+This is a very simple server that I made as a demo of the basic functionalities of GraphQL. Also this is part of this post: https://raccoon.ninja/pt/dev-pt/tutorial-graphql-com-exemplos-graphql-python-nodejs-dev-tutorial/
 
 # Schema
 ```

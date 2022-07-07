@@ -35,5 +35,5 @@ My plan is to, in the future, include the dataloaders and subscriptions.
 
 
 # Alternative, simpler server
-I also made a simpler GraphQL server to use in a tutorial I made. (Link: )
+I also made a simpler GraphQL server to use in a tutorial I made. (Link: https://raccoon.ninja/pt/dev-pt/tutorial-graphql-com-exemplos-graphql-python-nodejs-dev-tutorial/)
 In this server, you can add/remove reviews for Products and do a couple of queries. To know more, please check the readme file inside the folder  ```simple_server_python```.
