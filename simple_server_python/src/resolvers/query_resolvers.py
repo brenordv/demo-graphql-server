@@ -3,11 +3,10 @@ from typing import List, Union
 from ariadne import convert_kwargs_to_snake_case
 
 from src.data import PRODUCTS, REVIEWS
-from src.settings import LOGGER, REQUEST_COUNT, SERVER_VERSION
+from src.settings import LOGGER, SERVER_VERSION, get_request_count
 
 
-@convert_kwargs_to_snake_case
-def query_hello_resolver(obj, info, skip: int = 0, take: int = 100) -> str:
+def query_hello_resolver(obj, info) -> str:
     LOGGER.info(f"Resolving: Query.hello | Query number={info.context.get('request_count')}")
     return "Hello, World!"
 
@@ -18,19 +17,17 @@ def query_myname_resolver(obj, info, my_name_is: str) -> str:
     return f"Hi {my_name_is}! Nice to meet you!"
 
 
-@convert_kwargs_to_snake_case
 def query_req_count_resolver(obj, info) -> dict:
     LOGGER.info(f"Resolving: Query.reqCount | Query number={info.context.get('request_count')}")
     return {
-        "count": REQUEST_COUNT,
+        "count": get_request_count(),
         "server_version": SERVER_VERSION
     }
 
 
-@convert_kwargs_to_snake_case
 def query_products_resolver(obj, info) -> List[dict]:
     LOGGER.info(f"Resolving: Query.products | Query number={info.context.get('request_count')}")
-    return [*PRODUCTS]
+    return PRODUCTS
 
 
 @convert_kwargs_to_snake_case

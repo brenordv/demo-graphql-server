@@ -33,14 +33,14 @@ def mutation_review_create_resolver(obj, info, new_review_data: dict) -> dict:
 
 
 @convert_kwargs_to_snake_case
-def mutation_review_delete_resolver(obj, info: dict, review_id: str) -> dict:
+def mutation_review_delete_resolver(obj, info, review_id: str) -> dict:
     LOGGER.info(f"Resolving: Mutation.reviewDelete | Query number={info.context.get('request_count')}")
     rev_id = int(review_id)
     filtered_reviews = [r for r in REVIEWS if r.get('id') == rev_id]
     if len(filtered_reviews) == 0:
         return {
             "success": False,
-            "error_message": f"No product found with id '{review_id}'"
+            "error_message": f"No review found with id '{review_id}'"
         }
 
     review = filtered_reviews[0]
